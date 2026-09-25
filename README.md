@@ -6,13 +6,13 @@ Sean Park
 
 ## Description
 
-The pool has eight 512-byte blocks. A stack holds the free addresses. `allocate()` pops one. `deallocate()` pushes it back if the pointer is valid and not already free. `main.cpp` writes a packet, reads it back, reuses a freed block, then shows a full pool and a double free.
+The pool has eight 512-byte blocks. A stack stores the addresses of the free blocks. `allocate()` pops one address from the stack. `deallocate()` pushes the address back onto the stack if the pointer is valid and the block is not already free. `main.cpp` writes a packet, reads it back, reuses a freed block, demonstrates a full pool, and tests a double-free attempt.
 
 ## Stack Implementation
 
 Dynamic Array
 
-Stack stores items in a vector. `push` adds to the end. `pop` and `top` use the last item. The array can grow. It is not a fixed array, a linked list, or `std::stack`.
+The stack stores items in a `vector`. `push` adds an item to the end of the vector, while `pop` and `top` operate on the last item. The underlying array can grow dynamically. This implementation does not use a fixed-size array, linked list, or `std::stack`.
 
 ## How to Compile
 
