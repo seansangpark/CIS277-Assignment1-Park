@@ -1,0 +1,11 @@
+buffer_pool
+buffer_pool.exe
+*.o
+*.obj
+*.exe
+.DS_Store
+.vs/
+Debug/
+Release/
+build/
+cmake-build-debug/
